@@ -21,6 +21,7 @@ textarea
   text-transform: uppercase
   border-bottom: 1px solid $main-color-theme
   margin-bottom: 30px
+  +clearfix
 .dm-main_title-span
   display: inline-block
   position: relative
@@ -395,3 +396,63 @@ textarea
 .footer-copy
   margin-top: 50px
   text-align: center
+
+//Category
+.dm-filter
+  padding: 40px 0px
+  font-family: $sans-bold
+  font-size: 18px
+  input[type=radio]
+    display: none
+.dm-filter__title
+  font-size: 18px
+  line-height: 20px
+  margin-bottom: 15px
+.dm-filter-wrap
+  background-color: #fff
+  padding: 10px 20px
+.dm-filter-all__caption
+  margin-bottom: 5px
+.dm-filter-filter_block
+  +flexbox
+  +flex-wrap(wrap)
+.dm-filter-filter_block__item
+  +flex(1 1 0%)
+.dm-filter-input_block
+  +clearfix
+  li
+    float: left
+    width: 25%
+  input[type=radio]:checked + .dm-filter-input_block__label
+    background-color: $main-color-theme
+    color: #fff
+.dm-filter-input_block__label
+  display: inline-block
+  line-height: 36px
+  width: 100%
+  text-align: center
+  cursor: pointer
+  &:hover
+    background-color: $main-color-theme
+    color: #fff
+
+.dm-filter-price
+  +flexbox
+  +align-items(center)
+  input[type=radio]:checked + .dm-filter-price__label
+    border: 1px solid $main-color-theme
+.dm-filter-price__label
+  display: inline-block
+  margin: 0px 10px
+  width: 38px
+  height: 38px
+  border: 1px solid #cacaca
+  background-color: $bg-body
+  background-position: center center
+  background-repeat: no-repeat
+  cursor: pointer
+  +border-radius(50%)
+.dm-filter-price-label--down
+  background-image: url(../images/filter_down.png)
+.dm-filter-price-label--up
+  background-image: url(../images/filter_up.png)
