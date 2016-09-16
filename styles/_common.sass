@@ -1,0 +1,397 @@
+body
+  font-family: $font-base
+  font-size: $font-size-base
+  color: $color-text-base
+  background-color: $bg-body
+  height: 100%
+a
+  text-decoration: none
+textarea
+  resize: none
+
+.main
+  max-width: 1200px
+  margin: 0px auto
+
+//Main_title
+.main_title
+  font-size: 20px
+  line-height: 20px
+  font-family: $sans-bold
+  text-transform: uppercase
+  border-bottom: 1px solid $main-color-theme
+  margin-bottom: 30px
+.dm-main_title-span
+  display: inline-block
+  position: relative
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: 0px
+    bottom: -1px
+    width: 100%
+    border-bottom: 1px solid $bg-body
+
+//Main_card
+.main_card-wrap
+  +flexbox
+  +flex-wrap(wrap)
+  +justify-content(space-between)
+.main_card
+  display: block
+  max-width: 340px
+  min-width: 300px
+  width: 100%
+  text-align: center
+  color: $color-text-base
+  background-color: #f9f5e5
+  opacity: 1
+  margin: 0px 0px 90px 0px
+  +box-shadow(0px 0px 3px 0px rgba(51,51,51,0.7))
+  +transition(0.15s linear 0.05s)
+  &:hover
+    opacity: 0.75
+    +box-shadow(0px 0px 10px 0px rgba(51,51,51,0.7))
+.main_card__image
+  height: 267px
+  img
+    display: block
+    width: 100%
+    height: 100%
+.main_card__title
+  padding: 18px 5px 0px
+  font-family: $sans-bold
+  font-size: 18px
+  text-decoration: underline
+.main_card__text
+  padding: 5px
+.main_card__price
+  padding: 5px 5px 25px
+
+//Wood_btn
+.wood_btn
+  display: inline-block
+  width: 100%
+  max-width: 335px
+  padding: 20px 0px
+  border: 3px solid #6c2f05
+  text-align: center
+  font-size: 20px
+  line-height: 20px
+  color: #fff
+  text-transform: uppercase
+  font-family: $sans-bold
+  background: url(../images/bg_btn.png) no-repeat center transparent
+  background-size: cover
+  +border-radius(10px)
+  +transition(0.2s linear)
+  &:hover
+    background-image: none
+    background-color: $main-color-theme
+  &:focus
+    background-image: none
+    background-color: $main-color-theme
+    border: 3px solid #fff
+
+//Header-top
+.header-top-wrap
+  +flexbox
+  +flex-wrap(wrap)
+  +justify-content(space-between)
+.header-top-logo
+  height: 100px
+  +flexbox
+  +flex-wrap(nowrap)
+  +align-items(center)
+.header-top-logo__image
+  margin: 0px 15px 0px 0px
+  img
+    display: block
+.header-top-logo__text
+  font-family: $helvetica
+  font-size: 30px
+  line-height: 32px
+  color: #000
+  text-transform: uppercase
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 1)
+.header-top-info
+  text-align: right
+  height: 100px
+  font-family: $sans-bold
+  +flexbox
+  +flex-direction(column)
+  +justify-content(center)
+.header-top-info__text
+  font-size: 16px
+  line-height: 18px
+.header-top-info__phone
+  margin-top: 10px
+  font-size: 30px
+.header-top-phone
+  display: inline-block
+  margin: 0px 0px 0px 60px
+  position: relative
+.header-top-phone--first::before
+  content: url("../images/ico_mobile.png")
+  display: block
+  position: absolute
+  bottom: -5px
+  left: -30px
+.header-top-phone--second::before
+  content: url("../images/ico_phone.png")
+  display: block
+  position: absolute
+  bottom: -3px
+  left: -30px
+
+//Header-menu
+.header-menu
+  background: url("../images/bg_header.png") no-repeat center
+  -webkit-background-size: cover
+  background-size: cover
+.header-menu-nav
+  ul
+    +clearfix
+    li
+      float: left
+      width: 12.5%
+      border-left: 1px solid #b0b0ae
+      box-sizing: border-box
+      &:last-child
+        border-right: 1px solid #b0b0ae
+.header-menu-nav__link
+  height: 90px
+  color: #fff
+  text-transform: uppercase
+  text-align: center
+  font-family: $helvetica
+  background-color: transparent
+  +transition(0.1s linear)
+  +flexbox
+  +align-items(center)
+  +justify-content(center)
+  &:hover
+    background-color: rgba(57,169,37,0.8)
+
+//Houses
+.dm-houses
+  padding: 30px 0px
+.dm-houses-wrap
+  +flexbox
+  +flex-wrap(wrap)
+  +justify-content(space-between)
+  +align-items(flex-end)
+.dm-houses-item
+  display: block
+  opacity: 1
+  +transition(0.1s linear)
+  &:hover
+    opacity: 0.7
+.dm-houses__image
+  margin-bottom: 10px
+.dm-houses__text
+  text-align: center
+  font-size: 18px
+  font-family: $sans-bold
+  color: $color-text-base
+
+//Slider
+.dm-slider
+  position: relative
+.dm-slider-main__slide
+  img
+    display: block
+    width: 100%
+    height: 100%
+.dm-slider-layer
+  position: absolute
+  left: 0px
+  top: 0px
+  width: 100%
+  height: 100%
+  .main
+    height: 100%
+.dm-slider-controls-wrap
+  height: 100%
+  width: 100%
+  position: relative
+.dm-slider-controls
+  width: 86px
+  height: 86px
+  background: url("../images/controls.png") no-repeat
+  position: absolute
+  top: 50%
+  margin-top: -43px
+  cursor: pointer
+.dm-slider-controls--left
+  background-position: 0px 0px
+  left: 0px
+.dm-slider-controls--right
+  background-position: -86px 0px
+  right: 0px
+
+//Our_projects
+.dm-our_projects
+  padding: 60px 0px 0px
+.dm-our_projects-link
+  display: inline-block
+  float: right
+  font-size: 18px
+  line-height: 18px
+  color: $main-color-theme
+  text-transform: lowercase
+  &:hover
+    color: $color-text-base
+
+//Button
+.dm-button
+  padding: 15px 0px
+  background: url("../images/bg_button.png") no-repeat center
+  background-size: cover
+.dm-button-wrap
+  text-align: center
+
+//Advantages
+.dm-advantages
+  padding: 60px 0px 0px
+.dm-advantages-wrap
+  +flexbox
+  +flex-wrap(wrap)
+  +justify-content(space-between)
+.dm-advantages-item
+  position: relative
+  width: 316px
+  height: 316px
+  background: url(../images/adv_circle.png) no-repeat center
+  background-size: cover
+  text-align: center
+  margin: 0px 0px 60px
+  +border-radius(50%)
+  +flexbox
+  +flex-direction(column)
+  +justify-content(center)
+  +align-items(center)
+  &:hover
+    .dm-advantages-item__hover
+      opacity: 1
+    .dm-advantages-item__image::before
+      opacity: 0
+    .dm-advantages-item__title
+      opacity: 0
+    .dm-advantages-item__text
+      opacity: 0
+.dm-advantages-item__image
+  position: relative
+  margin-bottom: 20px
+  padding-left: 15px
+.dm-advantages-item__title
+  font-size: 18px
+  line-height: 18px
+  font-family: $sans-bold
+  margin-bottom: 5px
+  color: #000
+  +transition(0.1s linear)
+.dm-advantages-item__text
+  width: 60%
+  font-family: $sans-bold
+  font-size: 14px
+  line-height: 16px
+  +transition(0.1s linear)
+.dm-advantages-item__hover
+  position: absolute
+  opacity: 0
+  left: 0px
+  top: 0px
+  width: 100%
+  height: 100%
+  background-color: rgba(51,51,51,0.6)
+  color: #fff
+  font-family: $sans-bold
+  +border-radius(50%)
+  +transition(0.2s linear)
+  +flexbox
+  +justify-content(center)
+  +align-items(center)
+  p
+    width: 80%
+.dm-advantages-item-image--price::before
+  content: url(../images/adv_image_1.png)
+.dm-advantages-item-image--exp::before
+  content: url(../images/adv_image_2.png)
+.dm-advantages-item-image--quality::before
+  content: url(../images/adv_image_3.png)
+.dm-advantages-item-image--service::before
+  content: url(../images/adv_image_4.png)
+.dm-advantages-item-image--time::before
+  content: url(../images/adv_image_5.png)
+.dm-advantages-item-image--trust::before
+  content: url(../images/adv_image_6.png)
+.dm-advantages-item__image::before
+  position: absolute
+  display: block
+  left: -65px
+  bottom: -20px
+  +transition(0.1s linear)
+
+//Seo
+.dm-seo
+  padding: 0px 0px 50px
+.dm-seo__text
+  h2
+    font-family: $sans-bold
+    margin-bottom: 15px
+    font-size: 16px
+    line-height: 16px
+  p
+    margin-bottom: 10px
+    text-align: justify
+
+//Footer
+.footer
+  padding: 15px 0px
+  background: url(../images/bg_footer.png) no-repeat center
+  background-size: cover
+  border-top: 8px solid #865333
+.footer-nav
+  +flexbox
+  +flex-wrap(wrap)
+.footer-nav__item
+  +flex(1 1 0%)
+.footer-nav__title
+  height: 32px
+  margin-bottom: 10px
+  max-width: 86%
+  .footer-nav-title
+    display: inline-block
+    color: $color-text-base
+    font-size: 16px
+    line-height: 16px
+    font-family: $helvetica
+    &:hover
+      color: #000
+      font-weight: 700
+.footer-nav-list__link
+  display: inline-block
+  margin-bottom: 15px
+  text-decoration: underline
+  color: $color-text-base
+  &:hover
+    text-decoration: none
+.footer-file
+  display: inline-block
+  color: $color-text-base
+  text-decoration: underline
+  position: relative
+  margin: 35% 0px 0px
+  &:hover
+    text-decoration: none
+  &::before
+    content: url("../images/file.png")
+    position: absolute
+    left: 50%
+    margin-left: -20px
+    top: -40px
+.footer-copy
+  margin-top: 50px
+  text-align: center
