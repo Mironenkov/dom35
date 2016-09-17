@@ -18,4 +18,15 @@
         e.preventDefault();
         slider.goToNextSlide();
     });
+    $('.dm-card_item-slider').lightSlider({
+        gallery:true,
+        galleryMargin: 20,
+        thumbMargin: 60,
+        item:1,
+        loop:true,
+        thumbItem:3,
+        slideMargin:0,
+        enableDrag: false,
+        enableTouch: false
+    });
 })();
