@@ -100,6 +100,7 @@ input[placeholder]
   background-color: #fff
   box-sizing: border-box
   padding: 10px
+  width: 240px
   +border-radius(5px)
   &:focus
     line-height: 16px
@@ -431,7 +432,7 @@ input[placeholder]
   margin-top: 50px
   text-align: center
 
-//Category
+//Category page
 .dm-filter
   padding: 40px 0px
   font-family: $sans-bold
@@ -634,3 +635,78 @@ input[placeholder]
     height: 100%
   &:hover
     opacity: 0.8
+
+//Technology page
+.dm-technology-block
+  +flexbox
+  +flex-wrap(wrap)
+  +justify-content(space-between)
+.dm-technology-block__item
+  width: 25%
+.dm-technology-item
+  text-align: center
+  margin: 0px 20px 50px
+  &:hover
+    .dm-technology-item__image
+      opacity: 0.7
+.dm-technology-item__image
+  opacity: 1
+  +transition(0.1s linear)
+.dm-technology-item__text
+  font-size: 18px
+  line-height: 20px
+  font-family: $sans-bold
+  color: $color-text-base
+.dm-technology-text
+  text-align: justify
+  margin-bottom: 50px
+
+//Technology_card
+.dm-technology_card-block
+  border-bottom: 1px solid #d6d6d4
+  margin-bottom: 15px
+  +flexbox
+  +flex-wrap(wrap)
+  &:last-child
+    border-bottom: none
+.dm-technology_card-block__image
+  +flex(1 1 0%)
+.dm-technology_card-block__info
+  +flex(2 1 0%)
+.dm-technology_card-image
+  margin-right: 20px
+  border: 6px solid #fff
+  +box-shadow(0px 2px 5px 0px rgba(0,0,0,0.76))
+  img
+    width: 100%
+    height: 100%
+    display: block
+.dm-technology_card-info__title
+  font-size: 18px
+  line-height: 20px
+  font-family: $sans-bold
+  margin-bottom: 20px
+.dm-technology_card-info__sub-title
+  font-family: $sans-bold
+  margin-bottom: 15px
+.dm-technology_card-info__text
+  text-align: justify
+  margin-bottom: 15px
+
+//Gallery
+.dm-gallery
+  margin: 50px 0px
+.dm-gallery-block
+  +flexbox
+  +flex-wrap(wrap)
+  +justify-content(space-between)
+.dm-gallery-block__image
+  margin-bottom: 30px
+  img
+    display: block
+.dm-gallery-link--link
+  font-family: $sans-bold
+  color: $main-color-theme
+  text-decoration: underline
+  &:hover
+    text-decoration: none
